@@ -307,8 +307,23 @@
       ReactDOM.createRoot(sphereSlot).render(React.createElement(window.SplitSphere, { size }));
     }
     const hitlSlot = document.getElementById('hitl-slot');
-    if (hitlSlot && window.HITLWidget && window.innerWidth > 720) {
-      ReactDOM.createRoot(hitlSlot).render(React.createElement(window.HITLWidget));
+    if (hitlSlot && window.HITLWidget) {
+      // Mount only above the CSS breakpoint (see assets/home.css). Keep the
+      // JS in sync with the CSS by reacting to matchMedia changes, so a
+      // rotate/resize across the boundary doesn't leave an empty slot.
+      const mq = window.matchMedia('(max-width: 720px)');
+      let root = null;
+      const sync = () => {
+        if (!mq.matches && !root) {
+          root = ReactDOM.createRoot(hitlSlot);
+          root.render(React.createElement(window.HITLWidget));
+        } else if (mq.matches && root) {
+          root.unmount();
+          root = null;
+        }
+      };
+      sync();
+      mq.addEventListener('change', sync);
     }
   })();
 
