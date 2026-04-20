@@ -336,6 +336,10 @@ section{ padding:120px 0; position:relative }
     linear-gradient(180deg, rgba(244,245,251,0.04), rgba(244,245,251,0.015));
 }
 @media (max-width:900px){ .p-featured{ grid-template-columns:1fr } }
+@media (max-width:720px){
+  #hitl-slot{ display:none }
+  .hitl-hint{ display:none }
+}
 .p-featured h3{ font-size:clamp(32px, 3.4vw, 48px) }
 
 /* Card 02 — medium */
