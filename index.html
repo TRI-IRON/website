@@ -137,7 +137,7 @@
           <div class="p-head"><span class="pn">PRACTICE 01</span><span>·</span><span>DEFENCE &amp; REGULATED</span></div>
           <h3>Interfaces that can be trusted.</h3>
           <p class="lead">Secure frontends, human-AI teaming interfaces, identity and data-integrity tooling.</p>
-          <p class="body">Most interesting problems in defence and regulated software are interface problems. We understand the environments, the constraints and the terminology. Below: a live sketch of what we mean by <em style="color:var(--purple-hi); font-style:normal">human-in-the-loop</em> — draft, review, approve. Hover a paragraph.</p>
+          <p class="body">Most interesting problems in defence and regulated software are interface problems. We understand the environments, the constraints and the terminology.<span class="hitl-hint"> Below: a live sketch of what we mean by <em style="color:var(--purple-hi); font-style:normal">human-in-the-loop</em> — draft, review, approve. Hover a paragraph.</span></p>
           <div class="tags">
             <span>Human-in-the-loop</span><span>Sovereign</span><span>Modernisation</span>
           </div>
@@ -308,7 +308,22 @@
     }
     const hitlSlot = document.getElementById('hitl-slot');
     if (hitlSlot && window.HITLWidget) {
-      ReactDOM.createRoot(hitlSlot).render(React.createElement(window.HITLWidget));
+      // Mount only above the CSS breakpoint (see assets/home.css). Keep the
+      // JS in sync with the CSS by reacting to matchMedia changes, so a
+      // rotate/resize across the boundary doesn't leave an empty slot.
+      const mq = window.matchMedia('(max-width: 720px)');
+      let root = null;
+      const sync = () => {
+        if (!mq.matches && !root) {
+          root = ReactDOM.createRoot(hitlSlot);
+          root.render(React.createElement(window.HITLWidget));
+        } else if (mq.matches && root) {
+          root.unmount();
+          root = null;
+        }
+      };
+      sync();
+      mq.addEventListener('change', sync);
     }
   })();
 
