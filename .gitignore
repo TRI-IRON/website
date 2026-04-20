@@ -1,0 +1,24 @@
+# private design handoff bundle (brief PDF, chat transcripts, prototype sources)
+design_src/
+
+# OS artefacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# editor / tooling
+.vscode/
+.idea/
+*.swp
+*~
+
+# env / secrets
+.env
+.env.*
+!.env.example
+
+# node (future-proofing if we add a build step)
+node_modules/
+dist/
+build/
+.cache/
