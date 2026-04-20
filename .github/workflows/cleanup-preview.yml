@@ -7,6 +7,7 @@ on:
 jobs:
   cleanup:
     runs-on: ubuntu-latest
+    permissions: {}
     steps:
       - name: Delete preview deployments for this branch
         env:
@@ -25,11 +26,17 @@ jobs:
             RESP=$(curl -sSf -H "Authorization: Bearer $CF_API_TOKEN" \
               "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$PROJECT/deployments?env=preview&page=$PAGE&per_page=25")
 
-            COUNT=$(echo "$RESP" | jq '.result | length')
+            if [ "$(echo "$RESP" | jq -r '.success')" != "true" ]; then
+              echo "Cloudflare API request failed:"
+              echo "$RESP" | jq -c '.errors'
+              exit 1
+            fi
+
+            COUNT=$(echo "$RESP" | jq '(.result // []) | length')
             [ "$COUNT" -eq 0 ] && break
 
             IDS=$(echo "$RESP" | jq -r --arg b "$SAFE_BRANCH" \
-              '.result[] | select((.deployment_trigger.metadata.branch // "") == $b) | .id')
+              '(.result // [])[] | select((.deployment_trigger.metadata.branch // "") == $b) | .id')
 
             for ID in $IDS; do
               echo "Deleting $ID"
