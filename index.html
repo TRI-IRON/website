@@ -253,7 +253,7 @@
           <div class="cd-row"><div class="k">Engagement</div><div class="v">Direct · sub to prime · via framework</div></div>
         </div>
       </div>
-      <form class="form-card reveal" id="contact-form" action="/api/contact" method="post" novalidate>
+      <form class="form-card reveal" id="contact-form" novalidate>
         <div class="field">
           <label for="f-name">Name</label>
           <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
@@ -381,6 +381,7 @@
     const hp = form.querySelector('[name="hp"]').value;
     if (!name || !msg) { form.querySelector(!name ? '#f-name' : '#f-msg').focus(); return; }
     errBox.classList.remove('show');
+    sent.classList.remove('show');
     submitBtn.disabled = true;
     submitLabel.textContent = 'Sending…';
     try {

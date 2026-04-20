@@ -66,7 +66,6 @@ export async function onRequestPost({ request, env }) {
     body: JSON.stringify({
       from,
       to,
-      reply_to: data.email ? str(data.email) : undefined,
       subject,
       text: textBody,
       html: htmlBody,

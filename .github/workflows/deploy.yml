@@ -24,7 +24,7 @@ jobs:
       - name: Stage deployable files
         run: |
           mkdir -p _dist
-          cp -r index.html assets _dist/
+          cp -r index.html assets functions _dist/
 
       - name: Pick deploy branch
         id: branch
