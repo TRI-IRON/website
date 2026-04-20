@@ -3,10 +3,12 @@ name: Deploy to Cloudflare Pages
 on:
   push:
     branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened]
   workflow_dispatch: {}
 
 concurrency:
-  group: deploy-${{ github.ref }}
+  group: deploy-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -15,6 +17,7 @@ jobs:
     permissions:
       contents: read
       deployments: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
 
@@ -23,9 +26,34 @@ jobs:
           mkdir -p _dist
           cp -r index.html assets _dist/
 
+      - name: Pick deploy branch
+        id: branch
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            SAFE="$(echo '${{ github.head_ref }}' | sed 's|[^a-zA-Z0-9]|-|g')"
+            echo "name=$SAFE" >> "$GITHUB_OUTPUT"
+          else
+            echo "name=${{ github.ref_name }}" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Deploy to Cloudflare Pages
+        id: deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 0fb02bd98a655dc7d81294f60983cb1c
-          command: pages deploy _dist --project-name=website --branch=main
+          command: pages deploy _dist --project-name=website --branch=${{ steps.branch.outputs.name }}
+
+      - name: Sticky PR preview comment
+        if: github.event_name == 'pull_request'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: preview
+          message: |
+            ### Preview deployed
+
+            **URL:** ${{ steps.deploy.outputs.deployment-url }}
+            **Branch:** `${{ github.head_ref }}`
+            **Commit:** `${{ github.sha }}`
+
+            Auto-updates on every push.
