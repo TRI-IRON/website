@@ -5,14 +5,16 @@ Static marketing site for [Tri-Iron](https://tri-iron.co.uk) — three-founder e
 ## What's in here
 
 ```
-index.html        The whole page
+index.html          The whole page
 assets/
-  home.css        Styles
-  logo.png        Logo / favicon
-  split-sphere.js Hero sphere (React via CDN)
-  hitl-widget.js  Human-in-the-loop demo (React via CDN)
-  word-reveal.js  Hero word-reveal helper (not currently used)
-deploy.sh         One-shot deploy to Cloudflare Pages (fallback)
+  home.css          Styles
+  logo.png          Logo / favicon
+  split-sphere.js   Hero sphere (React via CDN)
+  hitl-widget.js    Human-in-the-loop demo (React via CDN)
+  word-reveal.js    Hero word-reveal helper (not currently used)
+functions/
+  api/contact.js    Contact-form handler (Cloudflare Pages Function → Resend)
+deploy.sh           One-shot deploy to Cloudflare Pages (fallback)
 ```
 
 No build step. Plain HTML, CSS, and vanilla JS. React is loaded from the unpkg CDN (production builds) only for the two interactive widgets. JSX was pre-compiled to `React.createElement` calls so we don't ship Babel.
@@ -71,3 +73,24 @@ Placeholders currently in the page:
 
 - `hello@tri-iron.co.uk` — swap for the real shared inbox.
 - Footer `Companies House № pending` — update once the dormant company activates.
+
+## Contact form
+
+The contact form POSTs to `/api/contact`, handled by the Cloudflare Pages Function at `functions/api/contact.js`, which relays the enquiry to `benrobertsheriff@gmail.com` via [Resend](https://resend.com).
+
+**One-time setup:**
+
+1. Sign up at <https://resend.com> using `benrobertsheriff@gmail.com`. (Using that specific address matters — Resend's default sender can only deliver to the account's registered email until a custom domain is verified.)
+2. Create an API key at <https://resend.com/api-keys> (full-access or send-only).
+3. In the Cloudflare Pages dashboard → project `website` → **Settings → Environment variables**, add a **production** variable:
+   - `RESEND_API_KEY` = the key from step 2 (mark as Secret / encrypted)
+4. Redeploy (push to `main`, or `./deploy.sh`). Env vars only take effect on new deployments.
+
+**Optional overrides** (same dashboard):
+
+- `CONTACT_TO` — recipient address (default `benrobertsheriff@gmail.com`)
+- `CONTACT_FROM` — sender, e.g. `Tri-Iron <hello@tri-iron.co.uk>` once the domain is verified in Resend. Leave unset to use Resend's `onboarding@resend.dev` default.
+
+**Upgrade to a branded sender** once `tri-iron.co.uk` is live: verify the domain in Resend (add the DNS records it gives you in Cloudflare), then set `CONTACT_FROM` to `Tri-Iron <hello@tri-iron.co.uk>`. After that, the function can deliver to any recipient, not just the signup email.
+
+**Testing locally:** `wrangler pages dev .` serves the site and runs Functions. Set `RESEND_API_KEY` in a local `.dev.vars` file (gitignored) — see [Wrangler docs](https://developers.cloudflare.com/pages/functions/bindings/#interact-with-your-environment-variables-locally).

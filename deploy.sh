@@ -6,7 +6,7 @@ set -euo pipefail
 DIST=_dist
 rm -rf "$DIST"
 mkdir -p "$DIST"
-cp -r index.html assets "$DIST/"
+cp -r index.html assets functions "$DIST/"
 
 wrangler pages deploy "$DIST" \
   --project-name=website \
