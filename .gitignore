@@ -22,3 +22,7 @@ node_modules/
 dist/
 build/
 .cache/
+
+# cloudflare pages / wrangler
+_dist/
+.wrangler/
