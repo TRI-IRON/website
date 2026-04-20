@@ -1,4 +1,0 @@
-# Redirect the default Cloudflare Pages URL to the real domain.
-# Preview deployments (hash.website-bax.pages.dev) are unaffected —
-# this only matches the bare production hostname.
-https://website-bax.pages.dev/*  https://tri-iron.co.uk/:splat  301!
