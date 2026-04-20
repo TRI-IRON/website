@@ -82,13 +82,13 @@ The contact form POSTs to `/api/contact`, handled by the Cloudflare Pages Functi
 
 1. Sign up at <https://resend.com> using `benrobertsheriff@gmail.com`. (Using that specific address matters — Resend's default sender can only deliver to the account's registered email until a custom domain is verified.)
 2. Create an API key at <https://resend.com/api-keys> (full-access or send-only).
-3. In the Cloudflare Pages dashboard → project `website` → **Settings → Environment variables**, add a **production** variable:
+3. In the Cloudflare Pages dashboard → project `website` → **Settings → Environment variables**, add **production** variables:
    - `RESEND_API_KEY` = the key from step 2 (mark as Secret / encrypted)
+   - `CONTACT_TO` = the recipient email address (e.g. `benrobertsheriff@gmail.com` until a shared inbox exists)
 4. Redeploy (push to `main`, or `./deploy.sh`). Env vars only take effect on new deployments.
 
-**Optional overrides** (same dashboard):
+**Optional override** (same dashboard):
 
-- `CONTACT_TO` — recipient address (default `benrobertsheriff@gmail.com`)
 - `CONTACT_FROM` — sender, e.g. `Tri-Iron <hello@tri-iron.co.uk>` once the domain is verified in Resend. Leave unset to use Resend's `onboarding@resend.dev` default.
 
 **Upgrade to a branded sender** once `tri-iron.co.uk` is live: verify the domain in Resend (add the DNS records it gives you in Cloudflare), then set `CONTACT_FROM` to `Tri-Iron <hello@tri-iron.co.uk>`. After that, the function can deliver to any recipient, not just the signup email.
