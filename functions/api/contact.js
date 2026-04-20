@@ -37,12 +37,11 @@ export async function onRequestPost({ request, env }) {
     console.error("RESEND_API_KEY is not set");
     return json({ ok: false, error: "not configured" }, 500);
   }
-  if (!env.CONTACT_TO) {
+  const to = str(env.CONTACT_TO);
+  if (!to) {
     console.error("CONTACT_TO is not set");
     return json({ ok: false, error: "not configured" }, 500);
   }
-
-  const to = env.CONTACT_TO;
   const from = env.CONTACT_FROM || "Tri-Iron site <onboarding@resend.dev>";
 
   const subject = `Tri-Iron enquiry: ${name}${org ? " · " + org : ""}`;
