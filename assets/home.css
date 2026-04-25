@@ -107,7 +107,7 @@ main, header, footer{ position:relative; z-index:2 }
 .brand-mark{ width:28px; height:28px }
 .brand-mark svg{ display:block; filter:drop-shadow(0 0 10px rgba(124,122,246,0.4)) }
 .nav-links{ display:flex; gap:28px; align-items:center; font-size:14px; color:var(--ink-soft); font-family:var(--mono); font-size:12.5px; letter-spacing:0.02em }
-.nav-links a{ padding:6px 0; position:relative; transition:color .15s ease }
+.nav-links a:not(.nav-cta){ padding:6px 0; position:relative; transition:color .15s ease }
 .nav-links a:hover{ color:var(--ink) }
 .nav-links a .arr{
   display:inline-block; transform:translateX(-4px); opacity:0; transition:opacity .25s ease, transform .25s ease;
