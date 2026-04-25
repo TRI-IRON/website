@@ -1,10 +1,10 @@
 // Cloudflare Pages Function — POST /api/contact
 // Receives the site's contact form and forwards it to CONTACT_TO via Resend.
 //
-// Required env var (set in Cloudflare Pages dashboard → Settings → Environment variables):
+// Required env vars (set in Cloudflare Pages dashboard → Settings → Environment variables):
 //   RESEND_API_KEY  — API key from https://resend.com/api-keys
-// Optional env vars (sensible defaults below):
-//   CONTACT_TO      — recipient (default: benrobertsheriff@gmail.com)
+//   CONTACT_TO      — recipient email address
+// Optional env var:
 //   CONTACT_FROM    — sender    (default: Tri-Iron site <onboarding@resend.dev>)
 //
 // Note on CONTACT_FROM: Resend's default `onboarding@resend.dev` works without
@@ -37,8 +37,11 @@ export async function onRequestPost({ request, env }) {
     console.error("RESEND_API_KEY is not set");
     return json({ ok: false, error: "not configured" }, 500);
   }
-
-  const to = env.CONTACT_TO || "benrobertsheriff@gmail.com";
+  const to = str(env.CONTACT_TO);
+  if (!to) {
+    console.error("CONTACT_TO is not set");
+    return json({ ok: false, error: "not configured" }, 500);
+  }
   const from = env.CONTACT_FROM || "Tri-Iron site <onboarding@resend.dev>";
 
   const subject = `Tri-Iron enquiry: ${name}${org ? " · " + org : ""}`;

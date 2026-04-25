@@ -82,15 +82,17 @@ The contact form POSTs to `/api/contact`, handled by the Cloudflare Pages Functi
 
 1. Sign up at <https://resend.com> using `benrobertsheriff@gmail.com`. (Using that specific address matters — Resend's default sender can only deliver to the account's registered email until a custom domain is verified.)
 2. Create an API key at <https://resend.com/api-keys> (full-access or send-only).
-3. In the Cloudflare Pages dashboard → project `website` → **Settings → Environment variables**, add a **production** variable:
+3. In the Cloudflare Pages dashboard → project `website` → **Settings → Environment variables**, add variables for **both Production and Preview** environments:
    - `RESEND_API_KEY` = the key from step 2 (mark as Secret / encrypted)
+   - `CONTACT_TO` = the recipient email address (e.g. `benrobertsheriff@gmail.com` until a shared inbox exists)
+
+   Preview deployments use the Preview env var set, so missing `CONTACT_TO` there will make `/api/contact` return 500 on PR previews.
 4. Redeploy (push to `main`, or `./deploy.sh`). Env vars only take effect on new deployments.
 
-**Optional overrides** (same dashboard):
+**Optional override** (same dashboard):
 
-- `CONTACT_TO` — recipient address (default `benrobertsheriff@gmail.com`)
 - `CONTACT_FROM` — sender, e.g. `Tri-Iron <hello@tri-iron.co.uk>` once the domain is verified in Resend. Leave unset to use Resend's `onboarding@resend.dev` default.
 
 **Upgrade to a branded sender** once `tri-iron.co.uk` is live: verify the domain in Resend (add the DNS records it gives you in Cloudflare), then set `CONTACT_FROM` to `Tri-Iron <hello@tri-iron.co.uk>`. After that, the function can deliver to any recipient, not just the signup email.
 
-**Testing locally:** `wrangler pages dev .` serves the site and runs Functions. Set `RESEND_API_KEY` in a local `.dev.vars` file (gitignored) — see [Wrangler docs](https://developers.cloudflare.com/pages/functions/bindings/#interact-with-your-environment-variables-locally).
+**Testing locally:** `wrangler pages dev .` serves the site and runs Functions. Set both `RESEND_API_KEY` and `CONTACT_TO` in a local `.dev.vars` file (gitignored) — see [Wrangler docs](https://developers.cloudflare.com/pages/functions/bindings/#interact-with-your-environment-variables-locally).
