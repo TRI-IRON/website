@@ -52,8 +52,9 @@ jobs:
           message: |
             ### Preview deployed
 
-            **URL:** ${{ steps.deploy.outputs.deployment-url }}
+            **Latest (stable):** ${{ steps.deploy.outputs.pages-deployment-alias-url }}
+            **This deploy:** ${{ steps.deploy.outputs.deployment-url }}
             **Branch:** `${{ github.head_ref }}`
-            **Commit:** `${{ github.sha }}`
+            **Commit:** ${{ github.event.pull_request.head.sha }}
 
             Auto-updates on every push.
