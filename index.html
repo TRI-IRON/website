@@ -1,422 +1,542 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<script>(function(h){if(h==="website-bax.pages.dev"||h==="triiron.co.uk"||h==="www.triiron.co.uk"||h==="www.tri-iron.co.uk")location.replace("https://tri-iron.co.uk"+location.pathname+location.search+location.hash);})(location.hostname);</script>
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="theme-color" content="#0A0E1A" />
-<title>Tri-Iron — Engineering & design studio, Cheltenham</title>
-<meta name="description" content="Tri-Iron is a three-founder engineering and design studio in Cheltenham, UK. Defence, regulated software, product engineering, and small AI-enabled tools — built carefully, by the founders." />
-<link rel="canonical" href="https://tri-iron.co.uk/" />
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      ;(function (h) {
+        if (
+          h === "website-bax.pages.dev" ||
+          h === "triiron.co.uk" ||
+          h === "www.triiron.co.uk" ||
+          h === "www.tri-iron.co.uk"
+        )
+          location.replace("https://tri-iron.co.uk" + location.pathname + location.search + location.hash)
+      })(location.hostname)
+    </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0A0E1A" />
+    <title>Tri-Iron — Engineering & design studio, Cheltenham</title>
+    <meta
+      name="description"
+      content="Tri-Iron is a three-founder engineering and design studio in Cheltenham, UK. Defence, regulated software, product engineering, and small AI-enabled tools — built carefully, by the founders."
+    />
+    <link rel="canonical" href="https://tri-iron.co.uk/" />
 
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Tri-Iron — Engineering & design studio, Cheltenham" />
-<meta property="og:description" content="Software built carefully, for places where it has to work. Three senior founders. Defence, national security, enterprise software." />
-<meta property="og:site_name" content="Tri-Iron" />
-<meta property="og:url" content="https://tri-iron.co.uk/" />
-<meta property="og:image" content="https://tri-iron.co.uk/assets/logo.png" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Tri-Iron — Engineering & design studio" />
-<meta name="twitter:description" content="Software built carefully, for places where it has to work." />
-<meta name="twitter:image" content="https://tri-iron.co.uk/assets/logo.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tri-Iron — Engineering & design studio, Cheltenham" />
+    <meta
+      property="og:description"
+      content="Software built carefully, for places where it has to work. Three senior founders. Defence, national security, enterprise software."
+    />
+    <meta property="og:site_name" content="Tri-Iron" />
+    <meta property="og:url" content="https://tri-iron.co.uk/" />
+    <meta property="og:image" content="https://tri-iron.co.uk/assets/logo.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Tri-Iron — Engineering & design studio" />
+    <meta name="twitter:description" content="Software built carefully, for places where it has to work." />
+    <meta name="twitter:image" content="https://tri-iron.co.uk/assets/logo.png" />
 
-<link rel="icon" type="image/png" href="assets/logo.png" />
-<link rel="apple-touch-icon" href="assets/logo.png" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="apple-touch-icon" href="assets/logo.png" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/home.css">
-</head>
-<body>
-
-<!-- Atmosphere -->
-<div class="atmos" aria-hidden="true">
-  <div class="aurora"></div>
-  <div class="grid"></div>
-  <div class="vignette"></div>
-  <div class="grain"></div>
-</div>
-<div class="spotlight" id="spotlight" aria-hidden="true"></div>
-
-<!-- ============ NAV ============ -->
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a href="#top" class="brand" aria-label="Tri-Iron home">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" width="28" height="28">
-          <defs>
-            <linearGradient id="lgNav" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#A5A3FF"/>
-              <stop offset="1" stop-color="#4F4DD1"/>
-            </linearGradient>
-          </defs>
-          <g fill="url(#lgNav)">
-            <path d="M6 8 C 20 4, 20 4, 34 8 L 32 12 C 20 9.2, 20 9.2, 8 12 Z"/>
-            <path d="M6 18 C 20 14, 20 14, 34 18 L 32 22 C 20 19.2, 20 19.2, 8 22 Z"/>
-            <path d="M6 28 C 20 24, 20 24, 34 28 L 32 32 C 20 29.2, 20 29.2, 8 32 Z"/>
-          </g>
-        </svg>
-      </span>
-      <span>Tri-Iron</span>
-    </a>
-    <nav class="nav-links">
-      <a href="#what" class="nl-hide"><span>Work</span><span class="arr"> ↓</span></a>
-      <a href="#team" class="nl-hide"><span>Team</span><span class="arr"> ↓</span></a>
-      <a href="#not" class="nl-hide"><span>Ethos</span><span class="arr"> ↓</span></a>
-      <a href="#contact" class="nav-cta">Get in touch →</a>
-    </nav>
-  </div>
-</header>
-
-<main id="top">
-
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="wrap">
-    <div class="stagger" id="hero-stagger">
-      <div class="hero-eyebrow">
-        <span class="dot"></span>
-        Engineering &amp; design studio
-        <span class="sep">·</span>
-        Cheltenham, UK
-      </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/home.css" />
+  </head>
+  <body>
+    <!-- Atmosphere -->
+    <div class="atmos" aria-hidden="true">
+      <div class="aurora"></div>
+      <div class="grid"></div>
+      <div class="vignette"></div>
+      <div class="grain"></div>
     </div>
+    <div class="spotlight" id="spotlight" aria-hidden="true"></div>
 
-    <div class="hero-inner">
-      <div>
-        <h1 id="hero-h1">
-          <span class="line"><span class="wr">Software built <span class="glow">carefully,</span></span></span>
-          <span class="line"><span class="wr muted">for places where it has to work.</span></span>
-        </h1>
-
-        <div class="hero-ctas reveal">
-          <a href="#contact" class="btn-primary">
-            Get in touch
-            <svg class="arr" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7H13M13 7L8 2M13 7L8 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="#what" class="btn-ghost">See the work ↓</a>
-        </div>
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="nav">
+      <div class="wrap nav-inner">
+        <a href="#top" class="brand" aria-label="Tri-Iron home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="28" height="28">
+              <defs>
+                <linearGradient id="lgNav" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#A5A3FF" />
+                  <stop offset="1" stop-color="#4F4DD1" />
+                </linearGradient>
+              </defs>
+              <g fill="url(#lgNav)">
+                <path d="M6 8 C 20 4, 20 4, 34 8 L 32 12 C 20 9.2, 20 9.2, 8 12 Z" />
+                <path d="M6 18 C 20 14, 20 14, 34 18 L 32 22 C 20 19.2, 20 19.2, 8 22 Z" />
+                <path d="M6 28 C 20 24, 20 24, 34 28 L 32 32 C 20 29.2, 20 29.2, 8 32 Z" />
+              </g>
+            </svg>
+          </span>
+          <span>Tri-Iron</span>
+        </a>
+        <nav class="nav-links">
+          <a href="#what" class="nl-hide"><span>Work</span><span class="arr"> ↓</span></a>
+          <a href="#team" class="nl-hide"><span>Team</span><span class="arr"> ↓</span></a>
+          <a href="#not" class="nl-hide"><span>Ethos</span><span class="arr"> ↓</span></a>
+          <a href="#contact" class="nav-cta">Get in touch →</a>
+        </nav>
       </div>
+    </header>
 
-      <div class="reveal" id="sphere-slot" style="display:grid; place-items:center">
-        <!-- SplitSphere injected here -->
-      </div>
-    </div>
+    <main id="top">
+      <!-- ============ HERO ============ -->
+      <section class="hero">
+        <div class="wrap">
+          <div class="stagger" id="hero-stagger">
+            <div class="hero-eyebrow">
+              <span class="dot"></span>
+              Engineering &amp; design studio
+              <span class="sep">·</span>
+              Cheltenham, UK
+            </div>
+          </div>
 
-    <p class="hero-strap reveal">Three senior founders. Defence, national security, enterprise software.</p>
+          <div class="hero-inner">
+            <div>
+              <h1 id="hero-h1">
+                <span class="line"
+                  ><span class="wr">Software built <span class="glow">carefully,</span></span></span
+                >
+                <span class="line"><span class="wr muted">for places where it has to work.</span></span>
+              </h1>
 
-    <div class="heritage reveal">
-      <div class="k">— Heritage</div>
-      <div class="logos">
-        <span>BAE Systems</span>
-        <span>Lockheed Martin</span>
-        <span>Velo Payments</span>
-      </div>
-    </div>
-  </div>
-</section>
+              <div class="hero-ctas reveal">
+                <a href="#contact" class="btn-primary">
+                  Get in touch
+                  <svg class="arr" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path
+                      d="M1 7H13M13 7L8 2M13 7L8 12"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+                <a href="#what" class="btn-ghost">See the work ↓</a>
+              </div>
+            </div>
 
-<!-- ============ WHAT WE DO ============ -->
-<section id="what">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <div class="section-num"><span class="bar"></span>01 / Work</div>
-        <h2 class="section-title">Three practices.<br><em>One standard.</em></h2>
-      </div>
-      <p class="section-lede">
-        We take on problems where engineering depth and design care both matter. Every engagement is touched by one of the three of us — no juniors on your programme, no offshoring, no handoffs to a team you haven't met.
-      </p>
-    </div>
+            <div class="reveal" id="sphere-slot" style="display: grid; place-items: center">
+              <!-- SplitSphere injected here -->
+            </div>
+          </div>
 
-    <div class="practices-grid">
-      <!-- Card 01 — featured, with live HITL demo -->
-      <article class="practice-card p-featured reveal">
-        <div>
-          <div class="p-head"><span class="pn">PRACTICE 01</span><span>·</span><span>DEFENCE &amp; REGULATED</span></div>
-          <h3>Interfaces that can be trusted.</h3>
-          <p class="lead">Secure frontends, human-AI teaming interfaces, identity and data-integrity tooling.</p>
-          <p class="body">Most interesting problems in defence and regulated software are interface problems. We understand the environments, the constraints and the terminology.<span class="hitl-hint"> Below: a live sketch of what we mean by <em style="color:var(--purple-hi); font-style:normal">human-in-the-loop</em> — draft, review, approve. Hover a paragraph.</span></p>
-          <div class="tags">
-            <span>Human-in-the-loop</span><span>Sovereign</span><span>Modernisation</span>
+          <p class="hero-strap reveal">Three senior founders. Defence, national security, enterprise software.</p>
+
+          <div class="heritage reveal">
+            <div class="k">— Heritage</div>
+            <div class="logos">
+              <span>BAE Systems</span>
+              <span>Lockheed Martin</span>
+              <span>Velo Payments</span>
+            </div>
           </div>
         </div>
-        <div id="hitl-slot" style="min-width:0"></div>
-      </article>
+      </section>
 
-      <!-- Card 02 — medium -->
-      <article class="practice-card p-medium reveal">
-        <div class="p-head"><span class="pn">PRACTICE 02</span><span>·</span><span>COMMERCIAL</span></div>
-        <h3>Product &amp; web engineering, built properly.</h3>
-        <p class="lead">Bespoke work for startups, scale-ups and established businesses.</p>
-        <p class="body">Not "a website" — actual engineering and design craft applied to whatever the client is trying to do. Internal tools, modern web applications, AI-enabled features, built the first time.</p>
-        <div class="tags">
-          <span>React · TypeScript</span><span>Design systems</span><span>AI features</span>
+      <!-- ============ WHAT WE DO ============ -->
+      <section id="what">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-num"><span class="bar"></span>01 / Work</div>
+              <h2 class="section-title">Three practices.<br /><em>One standard.</em></h2>
+            </div>
+            <p class="section-lede">
+              We take on problems where engineering depth and design care both matter. Every engagement is touched by
+              one of the three of us — no juniors on your programme, no offshoring, no handoffs to a team you haven't
+              met.
+            </p>
+          </div>
+
+          <div class="practices-grid">
+            <!-- Card 01 — featured, with live HITL demo -->
+            <article class="practice-card p-featured reveal">
+              <div>
+                <div class="p-head">
+                  <span class="pn">PRACTICE 01</span><span>·</span><span>DEFENCE &amp; REGULATED</span>
+                </div>
+                <h3>Interfaces that can be trusted.</h3>
+                <p class="lead">Secure frontends, human-AI teaming interfaces, identity and data-integrity tooling.</p>
+                <p class="body">
+                  Most interesting problems in defence and regulated software are interface problems. We understand the
+                  environments, the constraints and the terminology.<span class="hitl-hint">
+                    Below: a live sketch of what we mean by
+                    <em style="color: var(--purple-hi); font-style: normal">human-in-the-loop</em> — draft, review,
+                    approve. Hover a paragraph.</span
+                  >
+                </p>
+                <div class="tags"><span>Human-in-the-loop</span><span>Sovereign</span><span>Modernisation</span></div>
+              </div>
+              <div id="hitl-slot" style="min-width: 0"></div>
+            </article>
+
+            <!-- Card 02 — medium -->
+            <article class="practice-card p-medium reveal">
+              <div class="p-head"><span class="pn">PRACTICE 02</span><span>·</span><span>COMMERCIAL</span></div>
+              <h3>Product &amp; web engineering, built properly.</h3>
+              <p class="lead">Bespoke work for startups, scale-ups and established businesses.</p>
+              <p class="body">
+                Not "a website" — actual engineering and design craft applied to whatever the client is trying to do.
+                Internal tools, modern web applications, AI-enabled features, built the first time.
+              </p>
+              <div class="tags"><span>React · TypeScript</span><span>Design systems</span><span>AI features</span></div>
+            </article>
+
+            <!-- Card 03 — tall -->
+            <article class="practice-card p-tall reveal">
+              <span class="vertical-tag">In development · 2026 · Q3 →</span>
+              <div class="p-head"><span class="pn">PRACTICE 03</span><span>·</span><span>OUR OWN TOOLS</span></div>
+              <h3>Small, affordable, AI-enabled tools.</h3>
+              <p class="lead">Built for businesses that can't justify US-built SaaS prices.</p>
+              <p class="body">
+                The first helps small companies improve their web presence without a marketing agency.
+                Draft-and-approval loops so a human stays in control.
+              </p>
+              <div class="tags"><span>AI-enabled</span><span>UK-built</span><span>Human-reviewed</span></div>
+            </article>
+          </div>
         </div>
-      </article>
+      </section>
 
-      <!-- Card 03 — tall -->
-      <article class="practice-card p-tall reveal">
-        <span class="vertical-tag">In development · 2026 · Q3 →</span>
-        <div class="p-head"><span class="pn">PRACTICE 03</span><span>·</span><span>OUR OWN TOOLS</span></div>
-        <h3>Small, affordable, AI-enabled tools.</h3>
-        <p class="lead">Built for businesses that can't justify US-built SaaS prices.</p>
-        <p class="body">The first helps small companies improve their web presence without a marketing agency. Draft-and-approval loops so a human stays in control.</p>
-        <div class="tags">
-          <span>AI-enabled</span><span>UK-built</span><span>Human-reviewed</span>
+      <!-- ============ TEAM ============ -->
+      <section id="team" style="padding-top: 40px">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-num"><span class="bar"></span>02 / Team</div>
+              <h2 class="section-title">Three founders.<br /><span class="italic">Shared heritage.</span></h2>
+            </div>
+            <p class="section-lede">
+              Two of us were at BAE Systems Applied Intelligence at the same time. Two of us overlapped at Velo
+              Payments. Tri-Iron is what happens when you put three people who already know how each other build things
+              into the same room and let them pick their own work.
+            </p>
+          </div>
+
+          <div class="team-list">
+            <div class="founder-row reveal">
+              <div class="f-role">Founder<br />Developer</div>
+              <div>
+                <h3 class="f-name">Gareth&nbsp;P.</h3>
+                <p class="f-bio">
+                  Currently CTO of Naismiths. Ex-Head of Frontend at BAE Systems Applied Intelligence and Velo Payments.
+                  16+ years in application development across cyber security, open banking and property analytics.
+                </p>
+              </div>
+              <div class="f-prev">
+                <span>BAE Systems</span><span>Velo Payments</span><span>Naismiths</span><span>N3 Tech</span>
+              </div>
+            </div>
+            <div class="founder-row reveal">
+              <div class="f-role">Founder<br />Designer</div>
+              <div>
+                <h3 class="f-name">James&nbsp;N.</h3>
+                <p class="f-bio">
+                  Senior UX/UI. Led product design at CyberSmart; senior visual UX at Velo Payments; UX at BAE Systems
+                  Applied Intelligence and ADP. Builds design systems that take year-long projects down to three months.
+                </p>
+              </div>
+              <div class="f-prev">
+                <span>CyberSmart</span><span>Velo Payments</span><span>BAE Systems</span><span>ADP</span>
+              </div>
+            </div>
+            <div class="founder-row reveal">
+              <div class="f-role">Founder<br />Developer</div>
+              <div>
+                <h3 class="f-name">Ben&nbsp;S.</h3>
+                <p class="f-bio">
+                  Full-stack engineer, currently contracted to Lockheed Martin as a senior frontend developer.
+                  Previously at BAE Systems and Deep3. React, Node, TypeScript.
+                </p>
+              </div>
+              <div class="f-prev"><span>Lockheed Martin</span><span>BAE Systems</span><span>Deep3</span></div>
+            </div>
+          </div>
         </div>
-      </article>
-    </div>
+      </section>
 
-  </div>
-</section>
+      <!-- ============ ETHOS ============ -->
+      <section id="not" class="not-wrap">
+        <div class="wrap">
+          <div class="not-section reveal">
+            <div class="not-inner">
+              <div>
+                <div class="not-kicker">— 03 / Ethos</div>
+                <h2>How we <em>work.</em></h2>
+              </div>
+              <ul class="not-list stagger">
+                <li>
+                  <span class="no">No. 01</span
+                  ><span class="text"
+                    ><strong>Founders on every engagement.</strong> One of the three of us touches every piece of work,
+                    from kickoff to ship. No handoffs, no offshoring.</span
+                  >
+                </li>
+                <li>
+                  <span class="no">No. 02</span
+                  ><span class="text"
+                    ><strong>Simplicity as a deliverable.</strong> Anyone can add features. Restraint is the harder,
+                    rarer thing — and it's what we sell.</span
+                  >
+                </li>
+                <li>
+                  <span class="no">No. 03</span
+                  ><span class="text"
+                    ><strong>Only work we can staff ourselves.</strong> Small on purpose. If the three of us can't do it
+                    directly, it isn't Tri-Iron work.</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<!-- ============ TEAM ============ -->
-<section id="team" style="padding-top:40px">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <div class="section-num"><span class="bar"></span>02 / Team</div>
-        <h2 class="section-title">Three founders.<br><span class="italic">Shared heritage.</span></h2>
+      <!-- ============ CONTACT ============ -->
+      <section id="contact">
+        <div class="wrap">
+          <div class="contact-grid">
+            <div class="contact-side reveal">
+              <div class="section-num"><span class="bar"></span>04 / Contact</div>
+              <h2 class="contact-h">Tell us<br />what you're<br /><em>working on.</em></h2>
+              <p>
+                One paragraph is usually enough. We reply personally, usually within a couple of days. No booking
+                widgets, no newsletter signup.
+              </p>
+              <div class="contact-direct">
+                <div class="cd-row">
+                  <div class="k">Email</div>
+                  <div class="v"><a href="mailto:hello@tri-iron.co.uk">hello@tri-iron.co.uk</a></div>
+                </div>
+                <div class="cd-row">
+                  <div class="k">Location</div>
+                  <div class="v">Cheltenham, Gloucestershire, UK</div>
+                </div>
+                <div class="cd-row">
+                  <div class="k">Engagement</div>
+                  <div class="v">Direct · sub to prime · via framework</div>
+                </div>
+              </div>
+            </div>
+            <form class="form-card reveal" id="contact-form" novalidate>
+              <div class="field">
+                <label for="f-name">Name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+              </div>
+              <div class="field">
+                <label for="f-org">Organisation</label>
+                <input
+                  id="f-org"
+                  name="org"
+                  type="text"
+                  autocomplete="organization"
+                  placeholder="Company, programme, or nothing yet"
+                />
+              </div>
+              <div class="field">
+                <label for="f-msg">What you need</label>
+                <textarea
+                  id="f-msg"
+                  name="msg"
+                  required
+                  placeholder="A paragraph is plenty. What's the problem, and what would 'done' look like?"
+                ></textarea>
+                <div class="field-note">
+                  › The more concrete, the better. We'll reply with questions, not a sales deck.
+                </div>
+              </div>
+              <!-- honeypot: hidden from humans, catches naive bots -->
+              <div class="hp" aria-hidden="true">
+                <label>Leave this empty<input type="text" name="hp" tabindex="-1" autocomplete="off" /></label>
+              </div>
+              <div class="form-footer">
+                <span class="form-foot-note">→ Lands in a shared inbox. One of us reads it.</span>
+                <button type="submit" class="btn-primary" id="f-submit">
+                  <span class="f-label">Send enquiry</span>
+                  <svg class="arr" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path
+                      d="M1 7H13M13 7L8 2M13 7L8 12"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="form-sent" id="form-sent">
+                › Thanks — your note is on its way. One of us will come back to you.
+              </div>
+              <div class="form-error" id="form-error">
+                › Something went wrong sending that. Email us directly at
+                <a href="mailto:hello@tri-iron.co.uk">hello@tri-iron.co.uk</a>.
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap foot-inner">
+        <div>© 2026 Tri-Iron · Cheltenham, UK</div>
+        <div style="display: flex; gap: 22px">
+          <a href="#what">Work</a><a href="#team">Team</a><a href="#contact">Contact</a>
+        </div>
+        <div>Companies House № pending</div>
       </div>
-      <p class="section-lede">
-        Two of us were at BAE Systems Applied Intelligence at the same time. Two of us overlapped at Velo Payments. Tri-Iron is what happens when you put three people who already know how each other build things into the same room and let them pick their own work.
-      </p>
-    </div>
+    </footer>
 
-    <div class="team-list">
-      <div class="founder-row reveal">
-        <div class="f-role">Founder<br>Developer</div>
-        <div>
-          <h3 class="f-name">Gareth&nbsp;P.</h3>
-          <p class="f-bio">Currently CTO of Naismiths. Ex-Head of Frontend at BAE Systems Applied Intelligence and Velo Payments. 16+ years in application development across cyber security, open banking and property analytics.</p>
-        </div>
-        <div class="f-prev">
-          <span>BAE AI</span><span>Velo Payments</span><span>Naismiths</span><span>N3 Tech</span>
-        </div>
-      </div>
-      <div class="founder-row reveal">
-        <div class="f-role">Founder<br>Designer</div>
-        <div>
-          <h3 class="f-name">James&nbsp;N.</h3>
-          <p class="f-bio">Senior UX/UI. Led product design at CyberSmart; senior visual UX at Velo Payments; UX at BAE Systems Applied Intelligence and ADP. Builds design systems that take year-long projects down to three months.</p>
-        </div>
-        <div class="f-prev">
-          <span>CyberSmart</span><span>Velo Payments</span><span>BAE AI</span><span>ADP</span>
-        </div>
-      </div>
-      <div class="founder-row reveal">
-        <div class="f-role">Founder<br>Developer</div>
-        <div>
-          <h3 class="f-name">Ben&nbsp;S.</h3>
-          <p class="f-bio">Full-stack engineer, currently contracted to Lockheed Martin as a senior frontend developer. Previously at BAE Systems and Deep3. React, Node, TypeScript, and the kind of work that doesn't get talked about publicly.</p>
-        </div>
-        <div class="f-prev">
-          <span>Lockheed Martin</span><span>BAE Systems</span><span>Deep3</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ETHOS ============ -->
-<section id="not" class="not-wrap">
-  <div class="wrap">
-    <div class="not-section reveal">
-      <div class="not-inner">
-        <div>
-          <div class="not-kicker">— 03 / Ethos</div>
-          <h2>How we <em>work.</em></h2>
-        </div>
-        <ul class="not-list stagger">
-          <li><span class="no">No. 01</span><span class="text"><strong>Founders on every engagement.</strong> One of the three of us touches every piece of work, from kickoff to ship. No handoffs, no offshoring.</span></li>
-          <li><span class="no">No. 02</span><span class="text"><strong>Simplicity as a deliverable.</strong> Anyone can add features. Restraint is the harder, rarer thing — and it's what we sell.</span></li>
-          <li><span class="no">No. 03</span><span class="text"><strong>Only work we can staff ourselves.</strong> Small on purpose. If the three of us can't do it directly, it isn't Tri-Iron work.</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section id="contact">
-  <div class="wrap">
-    <div class="contact-grid">
-      <div class="contact-side reveal">
-        <div class="section-num"><span class="bar"></span>04 / Contact</div>
-        <h2 class="contact-h">Tell us<br>what you're<br><em>working on.</em></h2>
-        <p>One paragraph is usually enough. We reply personally, usually within a couple of days. No booking widgets, no newsletter signup.</p>
-        <div class="contact-direct">
-          <div class="cd-row"><div class="k">Email</div><div class="v"><a href="mailto:hello@tri-iron.co.uk">hello@tri-iron.co.uk</a></div></div>
-          <div class="cd-row"><div class="k">Location</div><div class="v">Cheltenham, Gloucestershire, UK</div></div>
-          <div class="cd-row"><div class="k">Engagement</div><div class="v">Direct · sub to prime · via framework</div></div>
-        </div>
-      </div>
-      <form class="form-card reveal" id="contact-form" novalidate>
-        <div class="field">
-          <label for="f-name">Name</label>
-          <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
-        </div>
-        <div class="field">
-          <label for="f-org">Organisation</label>
-          <input id="f-org" name="org" type="text" autocomplete="organization" placeholder="Company, programme, or nothing yet">
-        </div>
-        <div class="field">
-          <label for="f-msg">What you need</label>
-          <textarea id="f-msg" name="msg" required placeholder="A paragraph is plenty. What's the problem, and what would 'done' look like?"></textarea>
-          <div class="field-note">› The more concrete, the better. We'll reply with questions, not a sales deck.</div>
-        </div>
-        <!-- honeypot: hidden from humans, catches naive bots -->
-        <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="hp" tabindex="-1" autocomplete="off"></label></div>
-        <div class="form-footer">
-          <span class="form-foot-note">→ Lands in a shared inbox. One of us reads it.</span>
-          <button type="submit" class="btn-primary" id="f-submit">
-            <span class="f-label">Send enquiry</span>
-            <svg class="arr" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7H13M13 7L8 2M13 7L8 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </div>
-        <div class="form-sent" id="form-sent">› Thanks — your note is on its way. One of us will come back to you.</div>
-        <div class="form-error" id="form-error" role="alert" aria-live="assertive" aria-atomic="true" tabindex="-1">› Something went wrong sending that. Email us directly at <a href="mailto:hello@tri-iron.co.uk">hello@tri-iron.co.uk</a>.</div>
-      </form>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="wrap foot-inner">
-    <div>© 2026 Tri-Iron · Cheltenham, UK</div>
-    <div style="display:flex; gap:22px">
-      <a href="#what">Work</a><a href="#team">Team</a><a href="#contact">Contact</a>
-    </div>
-    <div>Companies House № pending</div>
-  </div>
-</footer>
-
-<!-- React (production) + components -->
-<script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
-<script src="assets/split-sphere.js"></script>
-<script src="assets/hitl-widget.js"></script>
-<script src="assets/word-reveal.js"></script>
-<script>
-  // -- Mount the React components
-  (function mount() {
-    const sphereSlot = document.getElementById('sphere-slot');
-    if (sphereSlot && window.SplitSphere) {
-      const size = Math.min(560, Math.max(320, window.innerWidth * 0.42));
-      ReactDOM.createRoot(sphereSlot).render(React.createElement(window.SplitSphere, { size }));
-    }
-    const hitlSlot = document.getElementById('hitl-slot');
-    if (hitlSlot && window.HITLWidget) {
-      // Mount only above the CSS breakpoint (see assets/home.css). Keep the
-      // JS in sync with the CSS by reacting to matchMedia changes, so a
-      // rotate/resize across the boundary doesn't leave an empty slot.
-      const mq = window.matchMedia('(max-width: 720px)');
-      let root = null;
-      const sync = () => {
-        if (!mq.matches && !root) {
-          root = ReactDOM.createRoot(hitlSlot);
-          root.render(React.createElement(window.HITLWidget));
-        } else if (mq.matches && root) {
-          root.unmount();
-          root = null;
+    <!-- React (production) + components -->
+    <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+    <script src="assets/split-sphere.js"></script>
+    <script src="assets/hitl-widget.js"></script>
+    <script src="assets/word-reveal.js"></script>
+    <script>
+      // -- Mount the React components
+      ;(function mount() {
+        const sphereSlot = document.getElementById("sphere-slot")
+        if (sphereSlot && window.SplitSphere) {
+          const size = Math.min(560, Math.max(320, window.innerWidth * 0.42))
+          ReactDOM.createRoot(sphereSlot).render(React.createElement(window.SplitSphere, { size }))
         }
-      };
-      sync();
-      mq.addEventListener('change', sync);
-    }
-  })();
+        const hitlSlot = document.getElementById("hitl-slot")
+        if (hitlSlot && window.HITLWidget) {
+          // Mount only above the CSS breakpoint (see assets/home.css). Keep the
+          // JS in sync with the CSS by reacting to matchMedia changes, so a
+          // rotate/resize across the boundary doesn't leave an empty slot.
+          const mq = window.matchMedia("(max-width: 720px)")
+          let root = null
+          const sync = () => {
+            if (!mq.matches && !root) {
+              root = ReactDOM.createRoot(hitlSlot)
+              root.render(React.createElement(window.HITLWidget))
+            } else if (mq.matches && root) {
+              root.unmount()
+              root = null
+            }
+          }
+          sync()
+          mq.addEventListener("change", sync)
+        }
+      })()
 
-  // -- Hero word reveals (CSS-driven staggered mask reveal)
-  document.querySelectorAll('#hero-h1 .wr').forEach((el, i) => {
-    el.style.display = 'inline-block';
-    el.style.transform = 'translateY(110%)';
-    el.style.opacity = '0';
-    el.style.transition = 'transform 1.05s cubic-bezier(.2,.8,.2,1), opacity 1.05s ease';
-    el.style.transitionDelay = `${120 + i * 110}ms`;
-  });
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      document.querySelectorAll('#hero-h1 .wr').forEach(el => {
-        el.style.transform = 'translateY(0)';
-        el.style.opacity = '1';
-      });
-    });
-  });
+      // -- Hero word reveals (CSS-driven staggered mask reveal)
+      document.querySelectorAll("#hero-h1 .wr").forEach((el, i) => {
+        el.style.display = "inline-block"
+        el.style.transform = "translateY(110%)"
+        el.style.opacity = "0"
+        el.style.transition = "transform 1.05s cubic-bezier(.2,.8,.2,1), opacity 1.05s ease"
+        el.style.transitionDelay = `${120 + i * 110}ms`
+      })
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          document.querySelectorAll("#hero-h1 .wr").forEach((el) => {
+            el.style.transform = "translateY(0)"
+            el.style.opacity = "1"
+          })
+        })
+      })
 
-  // -- Reveal observer
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-  }), { threshold: 0.12 });
-  document.querySelectorAll('.reveal, .stagger').forEach(el => io.observe(el));
-  requestAnimationFrame(() => document.getElementById('hero-stagger').classList.add('in'));
+      // -- Reveal observer
+      const io = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in")
+              io.unobserve(e.target)
+            }
+          }),
+        { threshold: 0.12 },
+      )
+      document.querySelectorAll(".reveal, .stagger").forEach((el) => io.observe(el))
+      requestAnimationFrame(() => document.getElementById("hero-stagger").classList.add("in"))
 
-  // -- Nav scroll state
-  const nav = document.getElementById('nav');
-  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 12);
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+      // -- Nav scroll state
+      const nav = document.getElementById("nav")
+      const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 12)
+      window.addEventListener("scroll", onScroll, { passive: true })
+      onScroll()
 
-  // -- Cursor spotlight
-  const sp = document.getElementById('spotlight');
-  let sx = 0, sy = 0, tx = window.innerWidth / 2, ty = window.innerHeight / 2;
-  window.addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; sp.classList.add('on'); });
-  window.addEventListener('pointerleave', () => sp.classList.remove('on'));
-  (function loop() {
-    sx += (tx - sx) * 0.08; sy += (ty - sy) * 0.08;
-    sp.style.transform = `translate(${sx}px, ${sy}px) translate(-50%,-50%)`;
-    requestAnimationFrame(loop);
-  })();
+      // -- Cursor spotlight
+      const sp = document.getElementById("spotlight")
+      let sx = 0,
+        sy = 0,
+        tx = window.innerWidth / 2,
+        ty = window.innerHeight / 2
+      window.addEventListener("pointermove", (e) => {
+        tx = e.clientX
+        ty = e.clientY
+        sp.classList.add("on")
+      })
+      window.addEventListener("pointerleave", () => sp.classList.remove("on"))
+      ;(function loop() {
+        sx += (tx - sx) * 0.08
+        sy += (ty - sy) * 0.08
+        sp.style.transform = `translate(${sx}px, ${sy}px) translate(-50%,-50%)`
+        requestAnimationFrame(loop)
+      })()
 
-  // -- Magnetic primary buttons
-  document.querySelectorAll('.btn-primary').forEach(btn => {
-    btn.addEventListener('pointermove', e => {
-      const r = btn.getBoundingClientRect();
-      const x = e.clientX - r.left - r.width / 2;
-      const y = e.clientY - r.top - r.height / 2;
-      btn.style.transform = `translate(${x * 0.15}px, ${y * 0.2}px)`;
-    });
-    btn.addEventListener('pointerleave', () => btn.style.transform = '');
-  });
+      // -- Magnetic primary buttons
+      document.querySelectorAll(".btn-primary").forEach((btn) => {
+        btn.addEventListener("pointermove", (e) => {
+          const r = btn.getBoundingClientRect()
+          const x = e.clientX - r.left - r.width / 2
+          const y = e.clientY - r.top - r.height / 2
+          btn.style.transform = `translate(${x * 0.15}px, ${y * 0.2}px)`
+        })
+        btn.addEventListener("pointerleave", () => (btn.style.transform = ""))
+      })
 
-  // -- Form
-  const form = document.getElementById('contact-form');
-  const sent = document.getElementById('form-sent');
-  const errBox = document.getElementById('form-error');
-  const submitBtn = document.getElementById('f-submit');
-  const submitLabel = submitBtn.querySelector('.f-label');
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
-    const name = form.querySelector('#f-name').value.trim();
-    const org = form.querySelector('#f-org').value.trim();
-    const msg = form.querySelector('#f-msg').value.trim();
-    const hp = form.querySelector('[name="hp"]').value;
-    if (!name || !msg) { form.querySelector(!name ? '#f-name' : '#f-msg').focus(); return; }
-    errBox.classList.remove('show');
-    sent.classList.remove('show');
-    submitBtn.disabled = true;
-    submitLabel.textContent = 'Sending…';
-    try {
-      const r = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ name, org, msg, hp }),
-      });
-      const data = await r.json().catch(() => ({}));
-      if (!r.ok || !data.ok) throw new Error(data.error || 'send failed');
-      sent.classList.add('show');
-      form.querySelectorAll('input, textarea').forEach(el => el.value = '');
-    } catch (err) {
-      errBox.classList.add('show');
-      errBox.focus();
-    } finally {
-      submitBtn.disabled = false;
-      submitLabel.textContent = 'Send enquiry';
-    }
-  });
-</script>
-</body>
+      // -- Form
+      const form = document.getElementById("contact-form")
+      const sent = document.getElementById("form-sent")
+      const errBox = document.getElementById("form-error")
+      const submitBtn = document.getElementById("f-submit")
+      const submitLabel = submitBtn.querySelector(".f-label")
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault()
+        const name = form.querySelector("#f-name").value.trim()
+        const org = form.querySelector("#f-org").value.trim()
+        const msg = form.querySelector("#f-msg").value.trim()
+        const hp = form.querySelector('[name="hp"]').value
+        if (!name || !msg) {
+          form.querySelector(!name ? "#f-name" : "#f-msg").focus()
+          return
+        }
+        errBox.classList.remove("show")
+        sent.classList.remove("show")
+        submitBtn.disabled = true
+        submitLabel.textContent = "Sending…"
+        try {
+          const r = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({ name, org, msg, hp }),
+          })
+          const data = await r.json().catch(() => ({}))
+          if (!r.ok || !data.ok) throw new Error(data.error || "send failed")
+          sent.classList.add("show")
+          form.querySelectorAll("input, textarea").forEach((el) => (el.value = ""))
+        } catch (err) {
+          errBox.classList.add("show")
+        } finally {
+          submitBtn.disabled = false
+          submitLabel.textContent = "Send enquiry"
+        }
+      })
+    </script>
+  </body>
 </html>
