@@ -378,7 +378,14 @@
               <div class="form-sent" id="form-sent">
                 › Thanks — your note is on its way. One of us will come back to you.
               </div>
-              <div class="form-error" id="form-error">
+              <div
+                class="form-error"
+                id="form-error"
+                role="alert"
+                aria-live="assertive"
+                aria-atomic="true"
+                tabindex="-1"
+              >
                 › Something went wrong sending that. Email us directly at
                 <a href="mailto:hello@tri-iron.co.uk">hello@tri-iron.co.uk</a>.
               </div>
@@ -532,6 +539,7 @@
           form.querySelectorAll("input, textarea").forEach((el) => (el.value = ""))
         } catch (err) {
           errBox.classList.add("show")
+          errBox.focus()
         } finally {
           submitBtn.disabled = false
           submitLabel.textContent = "Send enquiry"
